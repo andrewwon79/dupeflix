@@ -38,13 +38,17 @@ const App = () => {
 
   //If this is true, means we are logged in, if false then we not not logged in and all links go to register page
   //const user = true;
+  /*
+      <Route exact path="/" element={user ? <Home/> : <Navigate to ='/register'/>}/>
+      <Route exact path="/register" element={!user ? <Register/> : <Navigate to ='/'/>}/>
+  */
   const {user} = useContext(AuthContext);
   return (
           <div className='container-fluid p-0'>
               <Router>
                   <Routes>
-                      <Route exact path="/" element={user ? <Home/> : <Navigate to ='/register'/>}/>
-                      <Route exact path="/register" element={!user ? <Register/> : <Navigate to ='/'/>}/>
+                    <Route exact path="/" element={user ? <Home/> : <Navigate to ='/login'/>}/>
+                    <Route exact path="/register" element={!user ? <Register/> : <Navigate to ='/'/>}/>
                       <Route exact path="/login" element={!user ? <Login/> : <Navigate to ='/'/>}/>
                        {user ? (
                           //We need these little react fragments because react will complain and throw an error, the <></>
@@ -53,7 +57,7 @@ const App = () => {
                             <Route exact path="/series" element={<Home type='series'/>}/>
                             <Route exact path="/watch" element={<Watch/>}/>
                           </>
-                        ) : (<Route path='*' element={<Navigate to='/register'/>} />)
+                        ) : (<Route path='*' element={<Navigate to='/login'/>} />)
                       }
                       
                   </Routes>
