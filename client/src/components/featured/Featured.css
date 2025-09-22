@@ -1,0 +1,23 @@
+.vh-75 {
+    height: 75vh;
+  }
+  .vh-90 {
+    height: 90vh;
+  }
+
+  .top-15 {
+    top: 15%;
+  }
+
+  .w-15 {
+    width: 15%;
+  }
+
+/*   .featured {
+    height: 100%!important;
+  } */
+
+  h5{
+/*     -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black; */
+  }

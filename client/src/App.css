@@ -1,0 +1,10 @@
+:root{
+    --main-color: #0b0b0b;
+}
+/*
+how he fixes the link color when we use <Link></Link>
+.link {
+    color: inherit; it will inherit this color from its parent
+    text-decoration: none;
+}
+*/

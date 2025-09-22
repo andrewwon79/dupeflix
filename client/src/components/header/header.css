@@ -1,0 +1,21 @@
+.header {
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+    &.scrolled {
+        background-color: var(--main-color);
+    }
+}
+
+.img-size img {
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.btn {
+    border:none !important;
+    outline:none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
