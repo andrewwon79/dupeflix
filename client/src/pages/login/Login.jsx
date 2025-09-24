@@ -9,11 +9,12 @@ const Login = () => {
 
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
-    const {dispatch} = useContext(AuthContext);
+    const {dispatch, error} = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault();
         login({email,password},dispatch)
+        console.log("Error Status" + error)
     }
 
   return (
@@ -29,6 +30,7 @@ const Login = () => {
                 <div className="row vh-100 align-items-center justify-content-center">
                     <div className="col-4 px-4 py-5 h-50 mb-5">
                         <h1>Sign In</h1>
+                        {error && <h6 className="text-danger">Incorrect Username or Password</h6>}
                         <input type='email' className='form-control bg-secondary' placeholder='Email or Phone Number' aria-label="Email or Phone Number" aria-describedby="button-addon2" onChange={(e)=>setEmail(e.target.value)}/>
                         <input type='password' className='form-control bg-secondary' placeholder='Password' aria-label="Password" aria-describedby="button-addon2" onChange={(e)=>setPassword(e.target.value)}/>
                         <button className="btn px-4 text-white" type="button" id="button-addon2" onClick={handleLogin}>Sign In</button>
@@ -41,7 +43,6 @@ const Login = () => {
                     
                 </div>
         </div>
-
     </div>
   )
 }
