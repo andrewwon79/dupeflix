@@ -40,7 +40,7 @@ const Login = () => {
                             bot. <b>Learn more</b>.
                             <br />
                             Login Information:<br />
-                            UserName: "testUser" Password: "tester123"
+                            UserName: "testUser@gmail.com" Password: "tester123"
                         </small>
                     </div>
                     
