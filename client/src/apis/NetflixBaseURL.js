@@ -8,8 +8,8 @@ import axios from "axios";
 // if we are in production baseurl = "/api/v1/restaurants"
 // else baseurl = "http://localhost:3006/api/v1/restaurants"
 
-
-const baseURL = "http://localhost:3006/api/";
+const baseURL = process.env.NODE_ENV === 'production' ? "/api/" : "http://localhost:3006/api/";
+//const baseURL = "http://localhost:3006/api/";
 //const baseURL = "/api/v1/restaurants";
 export default axios.create({
     //equivalent to baseURL: baseURL
