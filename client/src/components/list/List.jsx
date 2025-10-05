@@ -55,7 +55,7 @@ const List = ({list}) => {
 
 
     
-    <div className='mt-3 w-100 position-relative listContainer'>
+    <div className='m-t w-100 position-relative listContainer'>
         <h3 className='ms-7 text-white'>{list.title}</h3>
         <div className="position-relative">
             <button type="button" onClick={(e) => handleClick(e, 'left')} className={'btn text-white position-absolute z-2 text-white h-100 w-3 p-0 ' + (isMoved ? 'd-block' : 'd-none')} aria-expanded="false">

@@ -47,24 +47,24 @@ const Header = () => {
                     <button type="button" className="btn btn-secondary-outline text-white">My List</button>
                 </div>
             </div>
-            <div className="col-2 offset-4">
-                <div className="btn-group-lg" role="group" aria-label="Basic example">
-                    <button type="button" className="btn outline-0 text-white shadow-none"><SearchIcon/></button>
-                    <button type="button" className="btn btn-secondary-outline text-white">Kids</button>
-                    <button type="button" className="img-size btn text-white">
-                        <img src={profilePicture} className='img-fluid rounded'/>
-                    </button>
-                    <div className="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" className="btn text-white" data-bs-toggle="dropdown" aria-expanded="false">
-                            <ArrowDropDownIcon/>
-                        </button>
-                        <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="btnGroupDrop1">
-                        <li><a className="dropdown-item" href="#">Settings</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={()=>dispatch(logout())}>Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div className="col-lg-6 d-flex justify-content-end">
+  <div className="d-flex flex-nowrap align-items-center gap-2">
+    <button type="button" className="btn outline-0 text-white shadow-none"><SearchIcon/></button>
+    <button type="button" className="btn btn-secondary-outline text-white">Kids</button>
+    <button type="button" className="img-size btn text-white">
+      <img src={profilePicture} className='img-fluid rounded'/>
+    </button>
+    <div className="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" className="btn text-white" data-bs-toggle="dropdown" aria-expanded="false">
+        <ArrowDropDownIcon/>
+      </button>
+      <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="btnGroupDrop1">
+        <li><a className="dropdown-item" href="#">Settings</a></li>
+        <li><a className="dropdown-item" href="#" onClick={()=>dispatch(logout())}>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
         </div>
   </div>
     
